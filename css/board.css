@@ -1,0 +1,140 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway','Century Gothic', sans-serif;
+    /* background-color: rgba(4, 4, 75, 0.87); */
+}
+body {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #926c6c;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1px;
+}
+.grid-item-r {
+    padding: 20px;
+    font-size: 30px;
+    text-align: right;
+}
+.grid-item-l {
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+}
+
+.soon {
+    filter: blur(1px) sepia(0.9);
+}
+
+.won button {
+    color: #eeeeee;
+    background-color: #cc0000;
+}
+.won button:hover {
+    color: #cccccc;
+    background-color: maroon;
+}
+.games button {
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+    background-color: #333333;
+    color: #707070;
+    margin: 0 auto 20px;
+    background-size: 146px;
+    background-position: center;
+    padding-top: 150px;
+    line-height: 125px;
+}
+.appearance button {
+    cursor: pointer;
+    background-color: #333333;
+    color: #411edd;
+    margin: 0 auto 20px;
+    background-size: 146px;
+    background-position: center;
+    padding-top: 150px;
+}
+
+
+button {
+    border: 1;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: 'Raleway', 'Century Gothic', sans-serif;
+    border-radius: 8px;
+    font-size: 18px;
+    
+}
+button.resumer {
+    background-color: #d6b6b6;
+    color: #190101;
+}
+button:hover {
+    background-color: #cc0000;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(61, 61, 61);
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: red;
+}
+.main {
+    padding: 200px;
+    margin-top: 200px;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    background-size: 30px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.show {
+    display: block;
+}

@@ -1,0 +1,207 @@
+.board {
+    min-height: 100%;
+}
+.board .inner {
+    width: 800px;
+    max-width: 100%;
+    padding: 20px 0 10px 0;
+    margin: auto;
+}
+.board.desktop .inner {
+    width: 400px;
+}
+
+.board.dark .cd.f {
+    background-color: #412020;
+    border-color: #2e2626;
+}
+.board.dark .closet {
+    background-color: #151111;
+}
+.board.dark .cd.s, .board.dark .cd.c {
+    background-size: 45px;
+    color: #999999;
+    background-color: #181818;
+}
+.board.dark .cd.h, .board.dark .cd.d {
+    background-size: 45px;
+    color: #ee5555;
+    background-color: #640000;
+}
+
+.cd {
+    overflow: hidden;
+    font-weight: bold;
+    padding: 3px;
+    text-align: right;
+    margin: 3px;
+    float: left;
+    width: 20px;
+    height: 30px;
+    z-index: 999;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+    user-select: none;
+}
+.cd * {
+    pointer-events: none;
+}
+.cd p {
+    float: left;
+    padding: 0 0 5px;
+}
+.cd p, .cd h2 {
+    margin: 0;
+    line-height: 1;
+}
+.cd i {
+    display: inline-block;
+    margin: 3px;
+    height: 0;
+    width: 0;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.closet {
+    float: right;
+    text-align: left;
+    border-radius: 5px;
+    height: 0px;
+    width: 25px;
+    padding: 36px 0px 0px;
+    margin: 0px 0px 5px 0px;
+}
+.closet .cd {
+    margin: -66px 0px 0px;
+}
+.closet .cd:last-of-type {
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5);
+}
+.closet > .icon {
+    pointer-events: none;
+    text-align: center;
+    height: 30px;
+    position: absolute;
+    width: 29px;
+    line-height: 40px;
+    margin: -50px 0 0 8px;
+    font-size: 40px;
+    opacity: 0.5;
+}
+.board.desktop .closet, .board.mobile.portrait .closet {
+    margin: 3px 7px 0 0;
+}
+.board.desktop .closets-area, .board.mobile.portrait .closets-area {
+    margin-right: 7px;
+}
+
+h1 {
+    padding: 20px 0 25px;
+    font-weight: 200;
+    font-size: 3em;
+    margin: 0;
+}
+
+.icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+.icon span {
+    display: block;
+}
+.icon.diamond {
+    transform: scaleX(0.7);
+}
+.icon.diamond span {
+    width: 70%;
+    height: 70%;
+    margin-top: 21%;
+    margin-left: 14%;
+    transform: rotate(45deg);
+}
+.icon.spade span, .icon.club span {
+    background: #999999;
+}
+.icon.heart span, .icon.diamond span {
+    background: #ee5555;
+}
+
+.stack {
+    padding-top: 75px;
+    min-height: 70px;
+    float: left;
+    transform-origin: 0 0;
+    background-size: 30px 40px;
+    background-repeat: no-repeat;
+    background-position: -3px 13px;
+}
+.board.dark .stack {
+  background-image: linear-gradient(#312727, #221c1c);
+}
+.board.desktop .stack, .board.mobile.portrait .stack {
+    width: 8.2%;
+}
+.board.desktop .stacks, .board.mobile.portrait .stacks {
+    clear: both;
+    padding: 5px;
+}
+.stack .cd {
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-top: -50px;
+    transition: margin-top 0.5s;
+}
+.stack .cd.f {
+    margin-top: -56px;
+}
+.stack.len10 .cd.f, .stack.len11 .cd.f, .stack.len12 .cd.f, .stack.len13 .cd.f, .stack.len14 .cd.f, .stack.len15 .cd.f, .stack.len16 .cd.f {
+    margin-top: -60px;
+}
+.stack .cd.f:first-child, .stack .cd.a:first-child {
+    margin-top: -60px
+}
+
+.cd.f+.cd.a {
+    margin-top: -55px;
+}
+
+.board.desktop .refuse-pile, .board.mobile.portrait .refuse-pile {
+    width: 100px;
+    float: left;
+    padding-top: 50px;
+    padding-left: 0px;
+}
+/* Card unfold */
+.board.desktop .refuse-pile .cd, .board.mobile.portrait .refuse-pile .cd {
+    float: right;
+    margin-right: 0;
+    margin-top: -45px;
+}
+.board.desktop .refuse-pile .cd, .board.desktop .refuse-pile .cd.f, .board.mobile.portrait .refuse-pile .cd, .board.mobile.portrait .refuse-pile .cd.f {
+    margin-top: -45px;
+    margin-bottom: 0;
+}
+.board.desktop .refuse-pile .cd.f, .board.mobile.portrait .refuse-pile .cd.f {
+    float: left;
+}
+.board.desktop .refuse-pile.all .cd.f, .board.mobile.portrait .refuse-pile.all .cd.f {
+    margin-left: 0px;
+}
+.board.desktop .refuse-pile .cd.f:first-child, .board.mobile.portrait .refuse-pile .cd.f:first-child {
+    margin-left: 0px;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media (max-width: 505px) {
+    .closets-area {
+        clear: both;
+    }
+}
